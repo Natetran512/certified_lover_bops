@@ -139,7 +139,6 @@ header.masthead {
   
     border-radius: 0.5rem;
   
-    cursor: pointer;
   }
   
   .music-card::before {
@@ -163,14 +162,25 @@ header.masthead {
     z-index: -1;
     transition: 0.3s transform;
   }
-  
-  .music-card > div {
+
+
+ 
+  .music-card > div > ol  {
     z-index: 1;
     color: white;
     opacity: 0;
     flex-basis: 100%;
     transform: scale(0.95);
     transition: 0.3s opacity, 0.3s transform;
+  }
+
+  .music-card > div > p  {
+    z-index: 1;
+    color: white;
+    opacity: 0;
+    flex-basis: 100%;
+    transform: scale(0.95);
+    transition: 1.5s opacity, 1.5s transform;
   }
   
   .music-card:hover::before {
@@ -181,11 +191,31 @@ header.masthead {
     transform: scale(1.02);
   }
   
-  .music-card:hover > div {
+  .music-card:hover > div > ol{
     opacity: 1;
     transform: scale(1);
   }
 
+  .music-card:hover > div > p{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+
   .music-col {
     column-gap: 30px;
+  }
+
+  .music-rating {
+    font-size: 25px;
+    text-align:center;
+  }
+
+  .album-name {
+    margin-bottom:1.5rem;
+    color:white;
+  }
+
+  a:link {
+    text-decoration: none;
   }
